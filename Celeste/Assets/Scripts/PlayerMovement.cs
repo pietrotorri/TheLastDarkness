@@ -8,20 +8,20 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
 
     //For jump and run
-    public float speed = 10.0f;
-    public float jumpVelocity;
-    public float SlideSpeed = 8;
+    public float speed = 4f;
+    public float jumpVelocity = 7.5f;
+    public float SlideSpeed = 1;
 
     //For wall jump
     public bool wallJumping;
     public float side;
-    public float wallJumpTime;
+    public float wallJumpTime = 0.4f;
     private float wallJumpCounter;
 
     //For better mechanics
     public float hangTime = 0.2f;
     private float hangCounter;
-    public float jumpBufferLenght;
+    public float jumpBufferLenght = 0.1f;
     private float jumpBufferCount;
 
     // Start is called before the first frame update

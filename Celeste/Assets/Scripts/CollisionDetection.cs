@@ -9,7 +9,7 @@ public class CollisionDetection : MonoBehaviour
     public bool onLeftWall;
 
     public Vector2 bottomOffset, rightOffset, leftOffset;
-    public float collisionRadius;
+    public float collisionRadius = 0.01f;
     public LayerMask groundLayer;
 
     // Start is called before the first frame updatee
