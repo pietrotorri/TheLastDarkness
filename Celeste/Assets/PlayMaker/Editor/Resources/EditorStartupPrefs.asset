@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   welcomeScreenVersion: '1.9.0 '
   playmakerVersion: 
-  showWelcomeScreen: 0
+  showWelcomeScreen: 1
   showUpgradeGuide: 0
-  lastAutoUpdateSignature: 2020.1.17f1__/Users/valentina/Desktop/Peter/TheLastDarkness/Celeste/Assets__0.0.0.0
+  lastAutoUpdateSignature: 2020.1.17f1__C:/Users/Giovanni Torri/Desktop/GitHub/TheLastDarkness/Celeste/Assets__0.0.0.0
   useLegacyNetworking: 0
