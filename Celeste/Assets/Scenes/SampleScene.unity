@@ -219,8 +219,8 @@ PolygonCollider2D:
     - - {x: -0.08918762, y: 3.9431508}
       - {x: -9.3791685, y: 3.9656584}
       - {x: -9.396113, y: -6.072958}
-      - {x: 26.614532, y: -6.0524797}
-      - {x: 26.58157, y: 3.9210653}
+      - {x: 26.614532, y: -6.556584}
+      - {x: 26.58157, y: 4.5932055}
 --- !u!114 &284161370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1318,10 +1318,10 @@ MonoBehaviour:
   onGround: 0
   onRightWall: 0
   onLeftWall: 0
-  bottomOffset: {x: 0, y: -0.32}
-  rightOffset: {x: 0.305, y: 0}
-  leftOffset: {x: -0.305, y: 0}
-  collisionRadius: 0.2
+  bottomOffset: {x: 0, y: -0.43}
+  rightOffset: {x: 0.26, y: 0}
+  leftOffset: {x: -0.25, y: 0}
+  collisionRadius: 0.01
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -2296,8 +2296,8 @@ PolygonCollider2D:
     - - {x: -0.08918762, y: 3.9431508}
       - {x: -9.3791685, y: 3.9656584}
       - {x: -9.396113, y: -6.072958}
-      - {x: 26.787666, y: -6.0524797}
-      - {x: 26.8289, y: 3.9210653}
+      - {x: 26.787666, y: -6.442704}
+      - {x: 26.8289, y: 4.1997976}
 --- !u!114 &1632253138
 MonoBehaviour:
   m_ObjectHideFlags: 0
