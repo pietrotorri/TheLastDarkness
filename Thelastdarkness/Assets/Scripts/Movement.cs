@@ -22,11 +22,6 @@ public class Movement : MonoBehaviour
     void Update()
     {
         //for Walk
-        Walk();
-    }
-
-    private void Walk()
-    {
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 dir = new Vector3(horizontal, 0f, vertical).normalized;
