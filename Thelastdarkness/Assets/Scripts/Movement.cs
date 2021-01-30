@@ -5,12 +5,17 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 { 
     public CharacterController controller;
-    public Transform cam;
 
-    //Walking
     public float speed;
-    public float turnSmoothTime = 0.1f;
-    float turnSmoothVelocity;
+    public float gravity = -9.81f;
+    public float jumpHeight;
+
+    Vector3 velocity;
+
+    public Transform groundCheck;
+    public float radius;
+    public LayerMask GroundLayer;
+    public bool isGrounded;
 
     // Start is called before the first frame update
     void Start()
@@ -21,19 +26,28 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //for Walk
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-        Vector3 dir = new Vector3(horizontal, 0f, vertical).normalized;
+        isGrounded = Physics.CheckSphere(groundCheck.position, radius, GroundLayer);
 
-        if (dir.magnitude * speed >= 0.1f)
+        if(isGrounded && velocity.y < 0)
         {
-            float targetAngle = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-            transform.rotation = Quaternion.Euler(0f, angle, 0f);
-
-            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            controller.Move(moveDir.normalized * speed * Time.deltaTime);
+            velocity.y = -2f;
         }
+
+        //for Walk
+        float x = Input.GetAxisRaw("Horizontal");
+        float z = Input.GetAxisRaw("Vertical");
+
+        Vector3 dir = transform.right * x + transform.forward * z;
+
+        controller.Move(dir * speed * Time.deltaTime);
+
+        if(Input.GetButtonDown("Jump") && isGrounded)
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        }
+
+        velocity.y += gravity * Time.deltaTime;
+
+        controller.Move(velocity * Time.deltaTime);
     }
 }
