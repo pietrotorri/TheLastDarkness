@@ -10,6 +10,8 @@ public class Inventory : MonoBehaviour
     private int slots;
     private Transform[] slot;
 
+    private GameObject itemPickedUp;
+
     public void Start()
     {
         // slots being detected
@@ -25,12 +27,19 @@ public class Inventory : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        
+        if (other.gameObject.GetComponent<Item>())
+        {
+            itemPickedUp = other.gameObject;
+            AddItem(itemPickedUp);
+        }
     }
 
     public void AddItem(GameObject item)
     {
+        for(int i = 0; i < slots; i++)
+        {
 
+        }
     }
 
     public void DetectInventorySlots()

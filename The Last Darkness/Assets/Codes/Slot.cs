@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     private bool hovered;
-    private bool used;
+    private bool empty;
 
     private GameObject item;
     private Texture itemIcon;
@@ -14,12 +14,13 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     private void Start()
     {
-        
+        hovered = false;
     }
 
     private void Update()
     {
-        
+        if (item)
+            empty = false;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
