@@ -208,6 +208,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4943bc0a7fd648c99be61a160c08b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  empty: 0
+  item: {fileID: 0}
+  itemIcon: {fileID: 0}
 --- !u!1 &163468046
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,6 +296,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4943bc0a7fd648c99be61a160c08b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  empty: 0
+  item: {fileID: 0}
+  itemIcon: {fileID: 0}
 --- !u!1 &269401387
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,6 +384,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4943bc0a7fd648c99be61a160c08b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  empty: 0
+  item: {fileID: 0}
+  itemIcon: {fileID: 0}
 --- !u!1001 &351812155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -467,10 +476,10 @@ RectTransform:
   m_Father: {fileID: 1700119382}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0010986, y: 0.00054932}
-  m_SizeDelta: {x: 2836.0024, y: 1596.0011}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.0010986328, y: 0.0005493164}
+  m_SizeDelta: {x: 0.0024414062, y: 0.0010986328}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &367662052
 MonoBehaviour:
@@ -523,7 +532,7 @@ GameObject:
   - component: {fileID: 447827750}
   m_Layer: 0
   m_Name: Item
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -616,6 +625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12d9b25559dfa5c418ccb687764c78d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: d4ee7d4f20e1d4f89a7ff833543867eb, type: 3}
 --- !u!65 &447827751
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -714,6 +724,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4943bc0a7fd648c99be61a160c08b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  empty: 0
+  item: {fileID: 0}
+  itemIcon: {fileID: 0}
 --- !u!1 &468593284
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,6 +776,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 1700119378}
   slotHolder: {fileID: 1226569819}
+--- !u!65 &486723421
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486723419}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6, y: 2.29, z: 1.6}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &486723425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -869,6 +895,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4943bc0a7fd648c99be61a160c08b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  empty: 0
+  item: {fileID: 0}
+  itemIcon: {fileID: 0}
 --- !u!1001 &676474445
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1179,6 +1208,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4943bc0a7fd648c99be61a160c08b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  empty: 0
+  item: {fileID: 0}
+  itemIcon: {fileID: 0}
 --- !u!1 &768676291
 GameObject:
   m_ObjectHideFlags: 0
@@ -1264,6 +1296,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4943bc0a7fd648c99be61a160c08b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  empty: 0
+  item: {fileID: 0}
+  itemIcon: {fileID: 0}
 --- !u!1001 &786622302
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1651,6 +1686,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4943bc0a7fd648c99be61a160c08b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  empty: 0
+  item: {fileID: 0}
+  itemIcon: {fileID: 0}
 --- !u!1 &1509650460
 GameObject:
   m_ObjectHideFlags: 0
@@ -1736,6 +1774,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4943bc0a7fd648c99be61a160c08b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  empty: 0
+  item: {fileID: 0}
+  itemIcon: {fileID: 0}
 --- !u!1001 &1519011205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1745,6 +1786,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
@@ -2002,6 +2047,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4943bc0a7fd648c99be61a160c08b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  empty: 0
+  item: {fileID: 0}
+  itemIcon: {fileID: 0}
 --- !u!1 &1905179471
 GameObject:
   m_ObjectHideFlags: 0
@@ -2087,6 +2135,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4943bc0a7fd648c99be61a160c08b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  empty: 0
+  item: {fileID: 0}
+  itemIcon: {fileID: 0}
 --- !u!1 &1972255506
 GameObject:
   m_ObjectHideFlags: 0
@@ -2172,6 +2223,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4943bc0a7fd648c99be61a160c08b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  empty: 0
+  item: {fileID: 0}
+  itemIcon: {fileID: 0}
 --- !u!1 &2039268108
 GameObject:
   m_ObjectHideFlags: 0
@@ -2257,6 +2311,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4943bc0a7fd648c99be61a160c08b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  empty: 0
+  item: {fileID: 0}
+  itemIcon: {fileID: 0}
 --- !u!1 &2126128126
 GameObject:
   m_ObjectHideFlags: 0
@@ -2342,6 +2399,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4943bc0a7fd648c99be61a160c08b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  empty: 0
+  item: {fileID: 0}
+  itemIcon: {fileID: 0}
 --- !u!1 &2128335782
 GameObject:
   m_ObjectHideFlags: 0
@@ -2427,3 +2487,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4943bc0a7fd648c99be61a160c08b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  empty: 0
+  item: {fileID: 0}
+  itemIcon: {fileID: 0}

@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     private bool hovered;
-    private bool empty;
+    public bool empty;
 
-    private GameObject item;
-    private Texture itemIcon;
+    public GameObject item;
+    public Texture itemIcon;
 
 
     private void Start()
@@ -20,7 +21,16 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     private void Update()
     {
         if (item)
+        {
             empty = false;
+
+            itemIcon = item.GetComponent<Item>().icon;
+            this.GetComponent<RawImage>().texture = itemIcon;
+        } else {
+
+            empty = true;
+        }
+            
     }
 
     public void OnPointerEnter(PointerEventData eventData)

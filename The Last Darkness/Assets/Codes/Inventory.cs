@@ -6,11 +6,14 @@ public class Inventory : MonoBehaviour
 {
     public GameObject inventory;
     public GameObject slotHolder;
+    private bool InventoryEnabled;
 
     private int slots;
     private Transform[] slot;
 
     private GameObject itemPickedUp;
+    private bool itemAdded;
+
 
     public void Start()
     {
@@ -22,15 +25,31 @@ public class Inventory : MonoBehaviour
 
     public void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            InventoryEnabled = !InventoryEnabled;
+        }
+
+        if (InventoryEnabled)
+            inventory.SetActive(true);
+        else
+            inventory.SetActive(false);
     }
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<Item>())
+        if (other.tag == "Item")
         {
             itemPickedUp = other.gameObject;
             AddItem(itemPickedUp);
+        }
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "Item")
+        {
+            itemAdded = false;
         }
     }
 
@@ -38,7 +57,12 @@ public class Inventory : MonoBehaviour
     {
         for(int i = 0; i < slots; i++)
         {
-
+            if (slot[i].GetComponent<Slot>().empty && itemAdded == false)
+            {
+                slot[i].GetComponent<Slot>().item = itemPickedUp;
+                slot[i].GetComponent<Slot>().itemIcon = itemPickedUp.GetComponent<Item>().icon;
+                itemAdded = true;
+            }
         }
     }
 
@@ -47,7 +71,6 @@ public class Inventory : MonoBehaviour
         for(int i = 0; i < slots; i++)
         {
             slot[i] = slotHolder.transform.GetChild(i);
-            print(slot[i].name);
         }
     }
 }
