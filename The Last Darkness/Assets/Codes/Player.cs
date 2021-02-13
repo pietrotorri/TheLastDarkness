@@ -35,4 +35,9 @@ public class Player : MonoBehaviour
         dead = true;
         print("YOU DIED");
     }
+
+    public void Drink(float decreaseRate)
+    {
+        thirst -= decreaseRate;
+    }
 }

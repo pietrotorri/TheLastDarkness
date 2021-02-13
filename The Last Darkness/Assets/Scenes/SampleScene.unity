@@ -626,6 +626,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 2800000, guid: d4ee7d4f20e1d4f89a7ff833543867eb, type: 3}
+  type: Water
+  decreaseRate: 0
 --- !u!65 &447827751
 BoxCollider:
   m_ObjectHideFlags: 0
