@@ -530,6 +530,7 @@ GameObject:
   - component: {fileID: 447827746}
   - component: {fileID: 447827751}
   - component: {fileID: 447827750}
+  - component: {fileID: 447827752}
   m_Layer: 0
   m_Name: Item
   m_TagString: Item
@@ -607,8 +608,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447827745}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.011333, y: 4.93, z: 96.05}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 37.011333, y: 4.506, z: 95.6}
+  m_LocalScale: {x: 0.5, y: 0.12419, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
@@ -627,7 +628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 2800000, guid: d4ee7d4f20e1d4f89a7ff833543867eb, type: 3}
   type: Water
-  decreaseRate: 0
+  decreaseRate: 50
 --- !u!65 &447827751
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -641,6 +642,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.5, z: 1.5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &447827752
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447827745}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &451373070
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,6 +795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 1700119378}
   slotHolder: {fileID: 1226569819}
+  itemManager: {fileID: 2004033306}
 --- !u!65 &486723421
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -812,6 +830,11 @@ MonoBehaviour:
   thirst: 0
   hunger: 0
   dead: 0
+--- !u!4 &486723427 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+  m_PrefabInstance: {fileID: 1519011205}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &516401064
 GameObject:
   m_ObjectHideFlags: 0
@@ -2228,6 +2251,36 @@ MonoBehaviour:
   empty: 0
   item: {fileID: 0}
   itemIcon: {fileID: 0}
+--- !u!1 &2004033306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2004033307}
+  m_Layer: 0
+  m_Name: Item Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2004033307
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004033306}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 486723427}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2039268108
 GameObject:
   m_ObjectHideFlags: 0
