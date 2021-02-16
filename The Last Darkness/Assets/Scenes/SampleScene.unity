@@ -824,8 +824,8 @@ MonoBehaviour:
   maxHealth: 100
   maxThirst: 150
   maxHunger: 200
-  thirstIncreaseRate: 1
-  hungerIncreaseRate: 1
+  thirstIncreaseRate: 0.65
+  hungerIncreaseRate: 0.8
   health: 0
   thirst: 0
   hunger: 0

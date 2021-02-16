@@ -27,7 +27,6 @@ public class Player : MonoBehaviour
             Die();
         if (hunger >= maxHunger)
             Die();
-            
     }
 
     public void Die()

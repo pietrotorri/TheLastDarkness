@@ -29,8 +29,9 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
             itemIcon = item.GetComponent<Item>().icon;
             this.GetComponent<RawImage>().texture = itemIcon;
         } else {
-
             empty = true;
+            itemIcon = null;
+            this.GetComponent<RawImage>().texture = null;
         }
             
     }
@@ -54,6 +55,7 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
             if(thisItem.type == "Water")
             {
                 player.GetComponent<Player>().Drink(thisItem.decreaseRate);
+                Destroy(item);
             }
 
         }
