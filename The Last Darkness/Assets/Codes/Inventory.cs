@@ -32,9 +32,9 @@ public class Inventory : MonoBehaviour
         }
 
         if (InventoryEnabled)
-            inventory.SetActive(true);
+            inventory.GetComponent<Canvas>().enabled = true;
         else
-            inventory.SetActive(false);
+            inventory.GetComponent<Canvas>().enabled = false;
     }
 
     public void OnTriggerEnter(Collider other)
