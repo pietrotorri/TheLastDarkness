@@ -39,4 +39,8 @@ public class Player : MonoBehaviour
     {
         thirst -= decreaseRate;
     }
+    public void Eat(float decreaseRate)
+    {
+        hunger -= decreaseRate;
+    }
 }

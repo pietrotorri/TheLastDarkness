@@ -58,6 +58,12 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
                 Destroy(item);
             }
 
+            if(thisItem.type == "Food")
+            {
+                player.GetComponent<Player>().Eat(thisItem.decreaseRate);
+                Destroy(item);
+            }
+
         }
     }
 }
