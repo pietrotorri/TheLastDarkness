@@ -64,6 +64,12 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
                 Destroy(item);
             }
 
+            if(thisItem.type == "Weapon" && player.GetComponent<Player>().weaponEquipped == false)
+            {
+                thisItem.equipped = true;
+                item.SetActive(true);
+            }
+
         }
     }
 }

@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public bool dead;
 
     public float damage;
+    public bool weaponEquipped;
 
     public static bool triggeringWithAI;
     public static GameObject triggeringAI;
@@ -47,7 +48,7 @@ public class Player : MonoBehaviour
 
     public void Attack(GameObject target)
     {
-        if(target.tag == "Animal")
+        if(target.tag == "Animal" && weaponEquipped)
         {
             Animal animal = target.GetComponent<Animal>();
             animal.health -= damage;

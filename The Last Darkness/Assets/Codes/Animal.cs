@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class Animal : MonoBehaviour
 {
+    private GameObject player;
+
     public float health;
     private bool dead;
 
@@ -32,6 +34,8 @@ public class Animal : MonoBehaviour
 
         currentTimer = timer;
         currentIdleTimer = idleTimer;
+
+        player = GameObject.FindWithTag("Player");
     }
 
     void Update()

@@ -66,12 +66,13 @@ public class Inventory : MonoBehaviour
                 item.transform.parent = itemManager.transform;
                 item.transform.position = itemManager.transform.position;
 
-                if (item.GetComponent<MeshRenderer>())
-                    item.GetComponent<MeshRenderer>().enabled = false;
+                item.transform.localPosition = item.GetComponent<Item>().position;
+                item.transform.localEulerAngles = item.GetComponent<Item>().rotation;
+                item.transform.localScale = item.GetComponent<Item>().scale;
 
                 Destroy(item.GetComponent<Rigidbody>());
-
                 itemAdded = true;
+                item.SetActive(false);
             }
         }
     }
