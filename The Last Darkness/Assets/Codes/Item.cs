@@ -25,11 +25,6 @@ public class Item : MonoBehaviour
     public void Update()
     {
         if (equipped)
-            player.GetComponent<Player>().weaponEquipped = true;
-        else
-            player.GetComponent<Player>().weaponEquipped = false;
-
-        if (equipped)
         {
             if (Input.GetKeyDown(KeyCode.F))
                 Unequip();
@@ -38,6 +33,7 @@ public class Item : MonoBehaviour
 
     public void Unequip()
     {
+        player.GetComponent<Player>().weaponEquipped = false;
         equipped = false;
         this.gameObject.SetActive(false);
     }

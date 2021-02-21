@@ -15,6 +15,9 @@ public class Player : MonoBehaviour
     public static bool triggeringWithAI;
     public static GameObject triggeringAI;
 
+    public static bool triggeringWithTree;
+    public static GameObject treeObject;
+
     public void Start()
     {
         health = maxHealth;
@@ -44,6 +47,15 @@ public class Player : MonoBehaviour
         }
         if (!triggeringAI)
             triggeringWithAI = false;
+
+        // tree chopping
+        if(triggeringWithTree == true && treeObject)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                Attack(treeObject);
+            }
+        }
     }
 
     public void Attack(GameObject target)
@@ -52,6 +64,12 @@ public class Player : MonoBehaviour
         {
             Animal animal = target.GetComponent<Animal>();
             animal.health -= damage;
+        }
+
+        if(target.tag == "Tree" && weaponEquipped)
+        {
+            Tree tree = target.GetComponent<Tree>();
+            tree.health -= damage;
         }
     }
 
@@ -70,9 +88,18 @@ public class Player : MonoBehaviour
         hunger -= decreaseRate;
     }
 
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Tree"))
+        {
+            triggeringWithTree = true;
+            treeObject = other.gameObject;
+        }
+    }
+
     public void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Animal")
+        if (other.CompareTag("Animal"))
         {
             triggeringAI = other.gameObject;
             triggeringWithAI = true;
@@ -80,7 +107,7 @@ public class Player : MonoBehaviour
     }
     public void OnTriggerExit(Collider other)
     {
-        if(other.tag == "Animal")
+        if (other.CompareTag("Animal"))
         {
             triggeringAI = null;
             triggeringWithAI = false;
