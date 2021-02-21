@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 587067086}
-  m_IndirectSpecularColor: {r: 0.33532265, g: 0.83181363, b: 0.9061909, a: 1}
+  m_IndirectSpecularColor: {r: 0.33532283, g: 0.83181536, b: 0.9061935, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -778,7 +778,7 @@ PrefabInstance:
     - target: {fileID: 23554165305394298, guid: b91dc775c64fe254b904619cecd6255f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d24f1333590984a6dbe76f3b625303ac, type: 2}
+      objectReference: {fileID: 2100000, guid: b46fd117e0d203044a81cee4c0161d2b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b91dc775c64fe254b904619cecd6255f, type: 3}
 --- !u!1 &587067085
@@ -1117,6 +1117,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5716681864270162303, guid: 0faaca137bc5a794098e6b71f8bb22f6, type: 3}
+      propertyPath: m_CullingType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -5716681864270162303, guid: 0faaca137bc5a794098e6b71f8bb22f6, type: 3}
       propertyPath: m_Animations.Array.size
       value: 2
@@ -1679,6 +1683,19 @@ MonoBehaviour:
   dead: 0
   damage: 25
   weaponEquipped: 0
+--- !u!65 &1143396884
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143396876}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 0.38810295, z: 0.076034546}
 --- !u!1 &1248945621
 GameObject:
   m_ObjectHideFlags: 0
@@ -2199,8 +2216,8 @@ MonoBehaviour:
   icon: {fileID: 2800000, guid: 9614cd2eb374be040b4a4fade6858bbe, type: 3}
   type: Weapon
   decreaseRate: 0
-  position: {x: 0.07057559, y: -0.3644723, z: 1.071574}
-  rotation: {x: -5.907, y: -81.36, z: 87.039}
+  position: {x: 0.355, y: -1.22, z: 1.35}
+  rotation: {x: -3.939, y: -97.082, z: 88.964}
   scale: {x: 0.52714, y: 0.5271401, z: 0.52714}
   pickedUp: 0
   equipped: 0
