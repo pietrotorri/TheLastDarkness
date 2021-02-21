@@ -688,7 +688,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486723419}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.6, y: 2.29, z: 1.6}
@@ -712,6 +712,7 @@ MonoBehaviour:
   hungerIncreaseRate: 0.8
   dead: 0
   damage: 25
+  weaponEquipped: 0
 --- !u!1 &516401064
 GameObject:
   m_ObjectHideFlags: 0

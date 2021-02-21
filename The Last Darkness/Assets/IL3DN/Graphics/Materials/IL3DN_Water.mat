@@ -162,7 +162,7 @@ Material:
     - _TessValue: 16
     - _Tiling: 0.05
     - _TranslucencyViewDependency: 0
-    - _Transparency: 2
+    - _Transparency: 5
     - _UVSec: 0
     - _WaterDepth: 0
     - _WaterFalloff: -0.5
@@ -192,4 +192,3 @@ Material:
     - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _TreeInstanceScale: {r: 1, g: 1, b: 1, a: 1}
     - _WaterColor: {r: 0.05887325, g: 0.46226412, b: 0.38302666, a: 1}
-  m_BuildTextureStacks: []

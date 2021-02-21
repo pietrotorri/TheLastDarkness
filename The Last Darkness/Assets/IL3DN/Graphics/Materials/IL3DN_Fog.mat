@@ -86,7 +86,7 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
-    - _Density: 40
+    - _Density: 20
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _ExcludeSkybox: 0
@@ -119,4 +119,3 @@ Material:
     - _SF_NoiseSpeed: {r: 0, g: 0, b: 0, a: 0}
     - _SF_NoiseTiling: {r: 1, g: 1, b: 1, a: 1}
     - _StartColor: {r: 1, g: 0, b: 0, a: 0}
-  m_BuildTextureStacks: []
