@@ -623,7 +623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 1700119378}
-  slotHolder: {fileID: 0}
+  slotHolder: {fileID: 1580750143}
   itemManager: {fileID: 2004033306}
 --- !u!65 &486723421
 BoxCollider:
@@ -2852,9 +2852,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d60539a0e29c640c980c2a2357c0d708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredItems: 0
-  item: []
-  player: {fileID: 0}
+  requiredItems: 2
+  item:
+  - {fileID: 6900949645491527703, guid: 9972116e28862b24fb238c385bc4cc36, type: 3}
+  - {fileID: 6900949645491527703, guid: 9972116e28862b24fb238c385bc4cc36, type: 3}
 --- !u!114 &1969856451
 MonoBehaviour:
   m_ObjectHideFlags: 0
