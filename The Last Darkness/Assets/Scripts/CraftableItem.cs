@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class CraftableItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    public GameObject thisItem;
+
     public int requiredItems;
     public GameObject[] item;
 
@@ -44,7 +46,6 @@ public class CraftableItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
                 {
                     if (itemManager.transform.GetChild(i).GetComponent<Item>().type == item[z].GetComponent<Item>().type)
                     {
-                        print("Item found!");
                         itemsFound++;
                         break;
                     }
@@ -52,20 +53,11 @@ public class CraftableItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
             }
 
             if (itemsFound >= requiredItems)
-                print("All items are found!");
-
-            /*
-            for (int i = 0; i < requiredItems; i++)
             {
-                for(int z = 0; z < itemsInManager; z++)
-                {
-                    if (itemManager.transform.GetChild(z).GetComponent<Item>().type == item[i].GetComponent<Item>().type)
-                    {
-                        print("Item found!");
-                    }
-                }
+                Vector3 pos = new Vector3(player.transform.position.x + 5, player.transform.position.y, player.transform.position.z + 5);
+                GameObject spawnedItem = Instantiate(thisItem, pos, Quaternion.identity);
+                //player.GetComponent<Inventory>().AddItem(spawnedItem);
             }
-            */
         }
     }
 

@@ -2852,9 +2852,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d60539a0e29c640c980c2a2357c0d708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredItems: 2
+  thisItem: {fileID: 6900949645491527703, guid: 9972116e28862b24fb238c385bc4cc36, type: 3}
+  requiredItems: 1
   item:
-  - {fileID: 6900949645491527703, guid: 9972116e28862b24fb238c385bc4cc36, type: 3}
   - {fileID: 6900949645491527703, guid: 9972116e28862b24fb238c385bc4cc36, type: 3}
 --- !u!114 &1969856451
 MonoBehaviour:
